@@ -238,10 +238,7 @@ int main(void)
                     0, true, 0, 0, LORA_IQ_INVERSION_ON, true);
 
 
-  //Radio.Rx(0);
-	rc5_init();
-	PRINTF("***********MOTHERSHIP RUNNING***********\n\r");
-	int8_t temp = 0;
+
   while (1)
   {
 //		LED_On(LED_GREEN)
@@ -258,11 +255,7 @@ int main(void)
 //		EncryptData(Buffer,4,EncryptedBuffer);
 //		
 //		Radio.Send(EncryptedBuffer, BufferSize);
-		DelayMs(400);
-		rc5_send_command(0x35,0x05);
-		DelayMs(40100);
-		
- 
+
   
   }
 }

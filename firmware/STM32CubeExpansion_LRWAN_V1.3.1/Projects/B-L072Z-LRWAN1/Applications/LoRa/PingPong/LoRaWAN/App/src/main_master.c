@@ -41,100 +41,12 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include <string.h>
-#include "hw.h"
 #include "radio.h"
 #include "timeServer.h"
 #include "low_power_manager.h"
 #include "vcom.h"
-#include "rc5.h"
-#if defined( REGION_AS923 )
-
-#define RF_FREQUENCY                                923000000 // Hz
-
-#elif defined( REGION_AU915 )
-
-#define RF_FREQUENCY                                915000000 // Hz
-
-#elif defined( REGION_CN470 )
-
-#define RF_FREQUENCY                                470000000 // Hz
-
-#elif defined( REGION_CN779 )
-
-#define RF_FREQUENCY                                779000000 // Hz
-
-#elif defined( REGION_EU433 )
-
-#define RF_FREQUENCY                                433000000 // Hz
-
-#elif defined( REGION_EU868 )
-
-#define RF_FREQUENCY                                868000000 // Hz
-
-#elif defined( REGION_KR920 )
-
-#define RF_FREQUENCY                                920000000 // Hz
-
-#elif defined( REGION_IN865 )
-
-#define RF_FREQUENCY                                865000000 // Hz
-
-#elif defined( REGION_US915 )
-
-#define RF_FREQUENCY                                915000000 // Hz
-
-#elif defined( REGION_RU864 )
-
-#define RF_FREQUENCY                                864000000 // Hz
-
-#else
-#error "Please define a frequency band in the compiler options."
-#endif
-
-#define TX_OUTPUT_POWER                             14        // dBm
-
-#define LORA_BANDWIDTH                              0         // [0: 125 kHz,
-//  1: 250 kHz,
-//  2: 500 kHz,
-//  3: Reserved]
-#define LORA_SPREADING_FACTOR                       7         // [SF7..SF12]
-#define LORA_CODINGRATE                             1         // [1: 4/5,
-//  2: 4/6,
-//  3: 4/7,
-//  4: 4/8]
-#define LORA_PREAMBLE_LENGTH                        8         // Same for Tx and Rx
-#define LORA_SYMBOL_TIMEOUT                         5         // Symbols
-#define LORA_FIX_LENGTH_PAYLOAD_ON                  false
-#define LORA_IQ_INVERSION_ON                        false
-
-
-
-typedef enum
-{
-  LOWPOWER,
-  RX,
-  RX_TIMEOUT,
-  RX_ERROR,
-  TX,
-  TX_TIMEOUT,
-} States_t;
-
-#define RX_TIMEOUT_VALUE                            1000
-#define BUFFER_SIZE                                 64 // Define the payload size here
-#define LED_PERIOD_MS               200
-
-/* APP DEFINES*/
-#define APP_HEADER 			0xb5
-#define APP_FRAME_LENGHT 	5
-#define APP_KEY				{0x45, 0x67,0x89,0xab,0xcd,0xef}
-
-
-#define LEDS_OFF   do{ \
-                   LED_Off( LED_BLUE ) ;   \
-                   LED_Off( LED_RED ) ;    \
-                   LED_Off( LED_GREEN1 ) ; \
-                   LED_Off( LED_GREEN2 ) ; \
-                   } while(0) ;
+#include "display.h"
+#include "main_master.h"
 
 
 uint16_t BufferSize = BUFFER_SIZE;
@@ -142,11 +54,21 @@ uint8_t Buffer[BUFFER_SIZE];
 
 States_t State = LOWPOWER;
 
+
+static uint8_t 	app_request =0;
+static int8_t 	indoor_temp = 12;
+static int8_t 	outdoor_temp = 25;
+static int8_t 	water_temp = 45;
+
+
 int8_t RssiValue = 0;
 int8_t SnrValue = 0;
 
 /* Led Timers objects*/
 static  TimerEvent_t timerLed;
+
+/* Temp read Timers objects*/
+static  TimerEvent_t timerTemp;
 
 /* Private function prototypes -----------------------------------------------*/
 /*!
@@ -155,44 +77,10 @@ static  TimerEvent_t timerLed;
 static RadioEvents_t RadioEvents;
 
 /*!
- * \brief Function to be executed on Radio Tx Done event
- */
-void OnTxDone(void);
-
-/*!
- * \brief Function to be executed on Radio Rx Done event
- */
-void OnRxDone(uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr);
-
-/*!
- * \brief Function executed on Radio Tx Timeout event
- */
-void OnTxTimeout(void);
-
-/*!
- * \brief Function executed on Radio Rx Timeout event
- */
-void OnRxTimeout(void);
-
-/*!
- * \brief Function executed on Radio Rx Error event
- */
-void OnRxError(void);
-
-/*!
  * \brief Function executed on when led timer elapses
  */
 static void OnledEvent(void *context);
-
-/*!
- * \brief Function calculate crc8
- */
-static uint8_t CalculateCRC8(const uint8_t *data,int length);
-
-/*!
- * \brief Function encrypt input data
- */
-static void EncryptData(const uint8_t *input_data,int length, uint8_t *encrypted_data);
+static void OnTempEvent(void *context);
 
 /**
  * Main application entry point.
@@ -213,6 +101,11 @@ int main(void)
   /* Led Timers*/
   TimerInit(&timerLed, OnledEvent);
   TimerSetValue(&timerLed, LED_PERIOD_MS);
+	
+	  /* Led Timers*/
+  TimerInit(&timerTemp, OnTempEvent);
+  TimerSetValue(&timerTemp, TEMP_PERIOD_MS);
+	TimerStart(&timerTemp);
 
 
   // Radio initialization
@@ -238,32 +131,20 @@ int main(void)
                     0, true, 0, 0, LORA_IQ_INVERSION_ON, true);
 
 
-  //Radio.Rx(0);
-	rc5_init();
+	//
+  Radio.Rx(0);
+	display_init();
 	PRINTF("***********MOTHERSHIP RUNNING***********\n\r");
-	int8_t temp = 0;
   while (1)
   {
-//		LED_On(LED_GREEN)
-//		DelayMs(100);
-//		LED_Off(LED_GREEN)
-//		BufferSize = 4;
-//		Buffer[0] = 0xb5;//nagłówek
-//		Buffer[1] = temp%2;//adres
-//		Buffer[2] = temp++;//temp 16*C
-//		Buffer[3] = CalculateCRC8(Buffer,3);
-//		
-//		uint8_t EncryptedBuffer[4] = {0};
-//		
-//		EncryptData(Buffer,4,EncryptedBuffer);
-//		
-//		Radio.Send(EncryptedBuffer, BufferSize);
-		DelayMs(400);
-		rc5_send_command(0x35,0x05);
-		DelayMs(40100);
-		
- 
-  
+		if(app_request)
+		{
+			app_request=0;
+			/*
+				read 1-wire sensor, save value and sent to display full set of temperatures
+			*/
+			display_set_temp(indoor_temp,outdoor_temp,water_temp);
+		}
   }
 }
 
@@ -301,8 +182,8 @@ void OnRxDone(uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr)
 		{
 			switch(decrypted_payload[1])
 			{
-			case 0:PRINTF("WaterTemp: %i\n\r",decrypted_payload[2]);/*DisplayWaterTemp(decrypted_payload[2])*/ ;break;
-			case 1:PRINTF("OutdoorTemp: %i\n\r",decrypted_payload[2]);/*DisplayOutdoorTemp(decrypted_payload[2])*/  ;break;
+			case 0:PRINTF("WaterTemp: %i\n\r",decrypted_payload[2]);water_temp = decrypted_payload[2]  ;break;
+			case 1:PRINTF("OutdoorTemp: %i\n\r",decrypted_payload[2]);outdoor_temp = decrypted_payload[2]  ;break;
 			default: break;
 			}
 		}
@@ -341,7 +222,12 @@ static void OnledEvent(void *context)
   LED_Off(LED_RED1) ;
   LED_Off(LED_RED2) ;
   LED_Off(LED_GREEN) ;
+}
 
+static void OnTempEvent(void *context)
+{
+	TimerStart(&timerTemp);
+	app_request=1;
 }
 
 static uint8_t CalculateCRC8(const uint8_t *data,int length)
