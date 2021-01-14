@@ -78,7 +78,7 @@ typedef enum
 #define LED_PERIOD_MS               								200
 
 /* APP DEFINES*/
-#define TEMP_PERIOD_MS               								270*1000//10 minut
+#define TEMP_PERIOD_MS               								30*1000// 
 
 #define APP_HEADER 			0xb5
 #define APP_FRAME_LENGHT 	5

@@ -1440,7 +1440,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\time.h)(0x5E53A4BA)
 I (..\LoRaWAN\App\inc\debug.h)(0x5DE7E10B)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53A4BC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53A4BC)
-F (..\LoRaWAN\App\src\main_master.c)(0x5FFEF0B2)(-c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\LoRaWAN\App\inc -I ..\Core\inc -I ..\..\..\..\..\..\Drivers\BSP\B-L072Z-LRWAN1 -I ..\..\..\..\..\..\Drivers\BSP\CMWX1ZZABZ-0xx -I ..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc -I ..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L0xx\Include -I ..\..\..\..\..\..\Drivers\CMSIS\Include -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Crypto -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Phy -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Utilities -I ..\..\..\..\..\..\Drivers\BSP\X_NUCLEO_IKS01A1 -I ..\..\..\..\..\..\Drivers\BSP\Components\Common -I ..\..\..\..\..\..\Drivers\BSP\Components\hts221 -I ..\..\..\..\..\..\Drivers\BSP\Components\lps25hb -I ..\..\..\..\..\..\Drivers\BSP\Components\sx1276 -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Patterns\Basic --C99-I.\RTE\_master-IC:\Users\FK\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Users\FK\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Device\Include-D__UVISION_VERSION="530" -DSTM32L072xx -D_RTE_ -DSTM32L072xx -DUSE_B_L072Z_LRWAN1 -DUSE_HAL_DRIVER -DLOW_POWER_DISABLE -DREGION_EU868 -DUSE_MODEM_LORA-o .\mlm32l07x01\main_master.o --omf_browse .\mlm32l07x01\main_master.crf --depend .\mlm32l07x01\main_master.d)
+F (..\LoRaWAN\App\src\main_master.c)(0x6000B0FE)(-c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\LoRaWAN\App\inc -I ..\Core\inc -I ..\..\..\..\..\..\Drivers\BSP\B-L072Z-LRWAN1 -I ..\..\..\..\..\..\Drivers\BSP\CMWX1ZZABZ-0xx -I ..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc -I ..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L0xx\Include -I ..\..\..\..\..\..\Drivers\CMSIS\Include -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Crypto -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Phy -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Utilities -I ..\..\..\..\..\..\Drivers\BSP\X_NUCLEO_IKS01A1 -I ..\..\..\..\..\..\Drivers\BSP\Components\Common -I ..\..\..\..\..\..\Drivers\BSP\Components\hts221 -I ..\..\..\..\..\..\Drivers\BSP\Components\lps25hb -I ..\..\..\..\..\..\Drivers\BSP\Components\sx1276 -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Patterns\Basic --C99-I.\RTE\_master-IC:\Users\FK\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Users\FK\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Device\Include-D__UVISION_VERSION="530" -DSTM32L072xx -D_RTE_ -DSTM32L072xx -DUSE_B_L072Z_LRWAN1 -DUSE_HAL_DRIVER -DLOW_POWER_DISABLE -DREGION_EU868 -DUSE_MODEM_LORA-o .\mlm32l07x01\main_master.o --omf_browse .\mlm32l07x01\main_master.crf --depend .\mlm32l07x01\main_master.d)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53A4BC)
 I (..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Phy\radio.h)(0x5FF47325)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53A4BC)
@@ -1493,7 +1493,7 @@ I (..\LoRaWAN\App\inc\utilities_conf.h)(0x5DE7E10B)
 I (..\LoRaWAN\App\inc\vcom.h)(0x5DE7E10B)
 I (..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Utilities\low_power_manager.h)(0x5FF47325)
 I (..\LoRaWAN\App\inc\display.h)(0x5FFEE114)
-I (..\LoRaWAN\App\inc\main_master.h)(0x5FFEF49F)
+I (..\LoRaWAN\App\inc\main_master.h)(0x60007810)
 I (..\LoRaWAN\App\inc\hw.h)(0x5DE7E10B)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E53A4BA)
 I (..\LoRaWAN\App\inc\hw_gpio.h)(0x5DE7E10B)
@@ -1505,6 +1505,9 @@ I (..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Utilities\systime.h)(0x5FF4
 I (C:\Keil_v5\ARM\ARMCC\include\time.h)(0x5E53A4BA)
 I (..\LoRaWAN\App\inc\debug.h)(0x5DE7E10B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53A4BC)
+I (..\LoRaWAN\App\inc\onewire.h)(0x60006EB9)
+I (..\LoRaWAN\App\inc\ds18b20.h)(0x60006FA8)
+I (..\LoRaWAN\App\inc\tim.h)(0x60006EBA)
 F (..\LoRaWAN\App\src\display.c)(0x5FFEE945)(-c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\LoRaWAN\App\inc -I ..\Core\inc -I ..\..\..\..\..\..\Drivers\BSP\B-L072Z-LRWAN1 -I ..\..\..\..\..\..\Drivers\BSP\CMWX1ZZABZ-0xx -I ..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc -I ..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L0xx\Include -I ..\..\..\..\..\..\Drivers\CMSIS\Include -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Crypto -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Phy -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Utilities -I ..\..\..\..\..\..\Drivers\BSP\X_NUCLEO_IKS01A1 -I ..\..\..\..\..\..\Drivers\BSP\Components\Common -I ..\..\..\..\..\..\Drivers\BSP\Components\hts221 -I ..\..\..\..\..\..\Drivers\BSP\Components\lps25hb -I ..\..\..\..\..\..\Drivers\BSP\Components\sx1276 -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Patterns\Basic --C99-I.\RTE\_master-IC:\Users\FK\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Users\FK\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Device\Include-D__UVISION_VERSION="530" -DSTM32L072xx -D_RTE_ -DSTM32L072xx -DUSE_B_L072Z_LRWAN1 -DUSE_HAL_DRIVER -DLOW_POWER_DISABLE -DREGION_EU868 -DUSE_MODEM_LORA-o .\mlm32l07x01\display.o --omf_browse .\mlm32l07x01\display.crf --depend .\mlm32l07x01\display.d)
 I (..\LoRaWAN\App\inc\display.h)(0x5FFEE114)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53A4BC)
@@ -1567,6 +1570,127 @@ I (..\LoRaWAN\App\inc\debug.h)(0x5DE7E10B)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53A4BC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53A4BC)
 I (..\LoRaWAN\App\inc\rc5.h)(0x5FFEDF1C)
+F (..\LoRaWAN\App\src\ds18b20.c)(0x600071EF)(-c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\LoRaWAN\App\inc -I ..\Core\inc -I ..\..\..\..\..\..\Drivers\BSP\B-L072Z-LRWAN1 -I ..\..\..\..\..\..\Drivers\BSP\CMWX1ZZABZ-0xx -I ..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc -I ..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L0xx\Include -I ..\..\..\..\..\..\Drivers\CMSIS\Include -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Crypto -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Phy -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Utilities -I ..\..\..\..\..\..\Drivers\BSP\X_NUCLEO_IKS01A1 -I ..\..\..\..\..\..\Drivers\BSP\Components\Common -I ..\..\..\..\..\..\Drivers\BSP\Components\hts221 -I ..\..\..\..\..\..\Drivers\BSP\Components\lps25hb -I ..\..\..\..\..\..\Drivers\BSP\Components\sx1276 -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Patterns\Basic --C99-I.\RTE\_master-IC:\Users\FK\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Users\FK\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Device\Include-D__UVISION_VERSION="530" -DSTM32L072xx -D_RTE_ -DSTM32L072xx -DUSE_B_L072Z_LRWAN1 -DUSE_HAL_DRIVER -DLOW_POWER_DISABLE -DREGION_EU868 -DUSE_MODEM_LORA-o .\mlm32l07x01\ds18b20.o --omf_browse .\mlm32l07x01\ds18b20.crf --depend .\mlm32l07x01\ds18b20.d)
+I (..\LoRaWAN\App\inc\ds18b20.h)(0x60006FA8)
+I (..\LoRaWAN\App\inc\tim.h)(0x60006EBA)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal.h)(0x5FF47323)
+I (..\Core\inc\stm32l0xx_hal_conf.h)(0x5DE7E0CD)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rcc.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_def.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\stm32l0xx.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\stm32l072xx.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Include\core_cm0plus.h)(0x5FF4731E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53A4BC)
+I (..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_version.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_armcc.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Include\mpu_armv7.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\system_stm32l0xx.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h)(0x5FF47323)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53A4BC)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rcc_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_gpio.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_gpio_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_dma.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_cortex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_adc.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_adc_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_flash.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_flash_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_flash_ramfunc.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_i2c.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_i2c_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_iwdg.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_pwr.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_pwr_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rtc.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rtc_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_spi.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_tim.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_tim_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart_ex.h)(0x5FF47323)
+I (..\LoRaWAN\App\inc\onewire.h)(0x60006EB9)
+F (..\LoRaWAN\App\src\onewire.c)(0x5FEEFDBD)(-c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\LoRaWAN\App\inc -I ..\Core\inc -I ..\..\..\..\..\..\Drivers\BSP\B-L072Z-LRWAN1 -I ..\..\..\..\..\..\Drivers\BSP\CMWX1ZZABZ-0xx -I ..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc -I ..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L0xx\Include -I ..\..\..\..\..\..\Drivers\CMSIS\Include -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Crypto -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Phy -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Utilities -I ..\..\..\..\..\..\Drivers\BSP\X_NUCLEO_IKS01A1 -I ..\..\..\..\..\..\Drivers\BSP\Components\Common -I ..\..\..\..\..\..\Drivers\BSP\Components\hts221 -I ..\..\..\..\..\..\Drivers\BSP\Components\lps25hb -I ..\..\..\..\..\..\Drivers\BSP\Components\sx1276 -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Patterns\Basic --C99-I.\RTE\_master-IC:\Users\FK\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Users\FK\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Device\Include-D__UVISION_VERSION="530" -DSTM32L072xx -D_RTE_ -DSTM32L072xx -DUSE_B_L072Z_LRWAN1 -DUSE_HAL_DRIVER -DLOW_POWER_DISABLE -DREGION_EU868 -DUSE_MODEM_LORA-o .\mlm32l07x01\onewire.o --omf_browse .\mlm32l07x01\onewire.crf --depend .\mlm32l07x01\onewire.d)
+I (..\LoRaWAN\App\inc\tim.h)(0x60006EBA)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal.h)(0x5FF47323)
+I (..\Core\inc\stm32l0xx_hal_conf.h)(0x5DE7E0CD)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rcc.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_def.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\stm32l0xx.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\stm32l072xx.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Include\core_cm0plus.h)(0x5FF4731E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53A4BC)
+I (..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_version.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_armcc.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Include\mpu_armv7.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\system_stm32l0xx.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h)(0x5FF47323)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53A4BC)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rcc_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_gpio.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_gpio_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_dma.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_cortex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_adc.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_adc_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_flash.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_flash_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_flash_ramfunc.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_i2c.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_i2c_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_iwdg.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_pwr.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_pwr_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rtc.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rtc_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_spi.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_tim.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_tim_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart_ex.h)(0x5FF47323)
+I (..\LoRaWAN\App\inc\onewire.h)(0x60006EB9)
+I (..\LoRaWAN\App\inc\ds18b20.h)(0x60006FA8)
+F (..\LoRaWAN\App\src\tim.c)(0x5FEEF6DB)(-c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\LoRaWAN\App\inc -I ..\Core\inc -I ..\..\..\..\..\..\Drivers\BSP\B-L072Z-LRWAN1 -I ..\..\..\..\..\..\Drivers\BSP\CMWX1ZZABZ-0xx -I ..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc -I ..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L0xx\Include -I ..\..\..\..\..\..\Drivers\CMSIS\Include -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Crypto -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Phy -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Utilities -I ..\..\..\..\..\..\Drivers\BSP\X_NUCLEO_IKS01A1 -I ..\..\..\..\..\..\Drivers\BSP\Components\Common -I ..\..\..\..\..\..\Drivers\BSP\Components\hts221 -I ..\..\..\..\..\..\Drivers\BSP\Components\lps25hb -I ..\..\..\..\..\..\Drivers\BSP\Components\sx1276 -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Patterns\Basic --C99-I.\RTE\_master-IC:\Users\FK\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Users\FK\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Device\Include-D__UVISION_VERSION="530" -DSTM32L072xx -D_RTE_ -DSTM32L072xx -DUSE_B_L072Z_LRWAN1 -DUSE_HAL_DRIVER -DLOW_POWER_DISABLE -DREGION_EU868 -DUSE_MODEM_LORA-o .\mlm32l07x01\tim.o --omf_browse .\mlm32l07x01\tim.crf --depend .\mlm32l07x01\tim.d)
+I (..\LoRaWAN\App\inc\tim.h)(0x60006EBA)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal.h)(0x5FF47323)
+I (..\Core\inc\stm32l0xx_hal_conf.h)(0x5DE7E0CD)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rcc.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_def.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\stm32l0xx.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\stm32l072xx.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Include\core_cm0plus.h)(0x5FF4731E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53A4BC)
+I (..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_version.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_armcc.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Include\mpu_armv7.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\system_stm32l0xx.h)(0x5FF4731E)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h)(0x5FF47323)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53A4BC)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rcc_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_gpio.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_gpio_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_dma.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_cortex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_adc.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_adc_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_flash.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_flash_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_flash_ramfunc.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_i2c.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_i2c_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_iwdg.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_pwr.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_pwr_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rtc.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rtc_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_spi.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_tim.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_tim_ex.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart.h)(0x5FF47323)
+I (..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart_ex.h)(0x5FF47323)
 F (..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Utilities\low_power_manager.c)(0x5FF47325)(-c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\LoRaWAN\App\inc -I ..\Core\inc -I ..\..\..\..\..\..\Drivers\BSP\B-L072Z-LRWAN1 -I ..\..\..\..\..\..\Drivers\BSP\CMWX1ZZABZ-0xx -I ..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc -I ..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L0xx\Include -I ..\..\..\..\..\..\Drivers\CMSIS\Include -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Crypto -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Phy -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Utilities -I ..\..\..\..\..\..\Drivers\BSP\X_NUCLEO_IKS01A1 -I ..\..\..\..\..\..\Drivers\BSP\Components\Common -I ..\..\..\..\..\..\Drivers\BSP\Components\hts221 -I ..\..\..\..\..\..\Drivers\BSP\Components\lps25hb -I ..\..\..\..\..\..\Drivers\BSP\Components\sx1276 -I ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Patterns\Basic --C99-I.\RTE\_master-IC:\Users\FK\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Users\FK\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Device\Include-D__UVISION_VERSION="530" -DSTM32L072xx -D_RTE_ -DSTM32L072xx -DUSE_B_L072Z_LRWAN1 -DUSE_HAL_DRIVER -DLOW_POWER_DISABLE -DREGION_EU868 -DUSE_MODEM_LORA-o .\mlm32l07x01\low_power_manager.o --omf_browse .\mlm32l07x01\low_power_manager.crf --depend .\mlm32l07x01\low_power_manager.d)
 I (..\LoRaWAN\App\inc\hw.h)(0x5DE7E10B)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E53A4BA)

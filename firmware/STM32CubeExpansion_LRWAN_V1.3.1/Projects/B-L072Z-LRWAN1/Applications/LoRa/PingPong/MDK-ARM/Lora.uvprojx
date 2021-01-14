@@ -649,6 +649,21 @@
               <FileType>1</FileType>
               <FilePath>..\LoRaWAN\App\src\display.c</FilePath>
             </File>
+            <File>
+              <FileName>ds18b20.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LoRaWAN\App\src\ds18b20.c</FilePath>
+            </File>
+            <File>
+              <FileName>onewire.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LoRaWAN\App\src\onewire.c</FilePath>
+            </File>
+            <File>
+              <FileName>tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LoRaWAN\App\src\tim.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1325,6 +1340,21 @@
               <FileName>display.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LoRaWAN\App\src\display.c</FilePath>
+            </File>
+            <File>
+              <FileName>ds18b20.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LoRaWAN\App\src\ds18b20.c</FilePath>
+            </File>
+            <File>
+              <FileName>onewire.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LoRaWAN\App\src\onewire.c</FilePath>
+            </File>
+            <File>
+              <FileName>tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LoRaWAN\App\src\tim.c</FilePath>
             </File>
           </Files>
         </Group>

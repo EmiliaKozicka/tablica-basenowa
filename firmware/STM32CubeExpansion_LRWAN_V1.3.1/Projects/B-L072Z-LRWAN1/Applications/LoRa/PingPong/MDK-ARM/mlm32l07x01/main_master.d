@@ -64,3 +64,6 @@
 .\mlm32l07x01\main_master.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h
 .\mlm32l07x01\main_master.o: ..\LoRaWAN\App\inc\debug.h
 .\mlm32l07x01\main_master.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\mlm32l07x01\main_master.o: ..\LoRaWAN\App\inc\onewire.h
+.\mlm32l07x01\main_master.o: ..\LoRaWAN\App\inc\ds18b20.h
+.\mlm32l07x01\main_master.o: ..\LoRaWAN\App\inc\tim.h

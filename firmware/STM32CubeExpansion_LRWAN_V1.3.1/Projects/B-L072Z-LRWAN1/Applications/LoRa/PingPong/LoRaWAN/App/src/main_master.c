@@ -48,6 +48,9 @@
 #include "display.h"
 #include "main_master.h"
 
+#include "onewire.h"
+#include "ds18b20.h"
+#include "tim.h"
 
 uint16_t BufferSize = BUFFER_SIZE;
 uint8_t Buffer[BUFFER_SIZE];
@@ -56,13 +59,15 @@ States_t State = LOWPOWER;
 
 
 static uint8_t 	app_request =0;
-static int8_t 	indoor_temp = 12;
-static int8_t 	outdoor_temp = 25;
-static int8_t 	water_temp = 45;
+static int8_t 	indoor_temp = 0;
+static int8_t 	outdoor_temp = 0;
+static int8_t 	water_temp = 0;
 
 
 int8_t RssiValue = 0;
 int8_t SnrValue = 0;
+
+static int8_t read_temp(void);
 
 /* Led Timers objects*/
 static  TimerEvent_t timerLed;
@@ -131,7 +136,10 @@ int main(void)
                     0, true, 0, 0, LORA_IQ_INVERSION_ON, true);
 
 
-	//
+	MX_TIM22_Init();
+ HAL_TIM_Base_Start(&htim22);
+ DS18B20_Init(DS18B20_Resolution_9bits);
+	
   Radio.Rx(0);
 	display_init();
 	PRINTF("***********MOTHERSHIP RUNNING***********\n\r");
@@ -143,7 +151,11 @@ int main(void)
 			/*
 				read 1-wire sensor, save value and sent to display full set of temperatures
 			*/
-			display_set_temp(indoor_temp,outdoor_temp,water_temp);
+			
+			static uint16_t cnt=0;
+			indoor_temp = read_temp();
+			PRINTF("Send to board: water: %i\t, indoor: %i\t, outdoor: %i\t, cnt: %d\n\r",water_temp,indoor_temp,outdoor_temp,cnt++);
+		//display_set_temp(indoor_temp,outdoor_temp,water_temp);
 		}
   }
 }
@@ -182,8 +194,8 @@ void OnRxDone(uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr)
 		{
 			switch(decrypted_payload[1])
 			{
-			case 0:PRINTF("WaterTemp: %i\n\r",decrypted_payload[2]);water_temp = decrypted_payload[2]  ;break;
-			case 1:PRINTF("OutdoorTemp: %i\n\r",decrypted_payload[2]);outdoor_temp = decrypted_payload[2]  ;break;
+			case 0:water_temp = decrypted_payload[2]  ;PRINTF("Recieved Water Temp: %i\n\r",water_temp);break;
+			case 1:outdoor_temp = decrypted_payload[2]  ;PRINTF("Recieved Outdoor Temp: %i\n\r",outdoor_temp);break;
 			default: break;
 			}
 		}
@@ -261,3 +273,33 @@ static void EncryptData(const uint8_t *input_data,int length, uint8_t *encrypted
 
 }
 
+static int8_t read_temp()
+{
+	uint8_t  temperature_to_send;
+	int8_t temperature_int8;
+
+	DS18B20_ReadAll();
+	DS18B20_StartAll();
+	 
+	 float temperature_float;
+	 char message[64];
+
+	 for(uint8_t i = 0; i < DS18B20_Quantity(); i++)
+	 {
+		if(DS18B20_GetTemperature(i, &temperature_float))
+		{
+			temperature_int8 = (int8_t)(round(temperature_float));// temperature_float w celach diagnostycznych
+			temperature_to_send = abs(temperature_int8);
+
+			if(temperature_int8 < 0) //sprawdzanie znaku
+			{
+				temperature_to_send |= 1<<7;
+			}
+			else
+			{
+					//do nothing;
+			}	
+		}
+	 }
+	 return temperature_to_send;
+}
