@@ -47,6 +47,9 @@
 #include "low_power_manager.h"
 #include "vcom.h"
 #include "rc5.h"
+#include "onewire.h"
+#include "ds18b20.h"
+#include "tim.h"
 #if defined( REGION_AS923 )
 
 #define RF_FREQUENCY                                923000000 // Hz
@@ -127,7 +130,8 @@ typedef enum
 #define APP_HEADER 			0xb5
 #define APP_FRAME_LENGHT 	5
 #define APP_KEY				{0x45, 0x67,0x89,0xab,0xcd,0xef}
-
+	 uint8_t  temperature_to_send;
+int8_t temperature_int8;
 
 #define LEDS_OFF   do{ \
                    LED_Off( LED_BLUE ) ;   \
@@ -206,7 +210,7 @@ int main(void)
   //DBG_Init();
 
   HW_Init();
-
+	
   /*Disbale Stand-by mode*/
   LPM_SetOffMode(LPM_APPLI_Id, LPM_Disable);
 
@@ -237,25 +241,54 @@ int main(void)
                     LORA_SYMBOL_TIMEOUT, LORA_FIX_LENGTH_PAYLOAD_ON,
                     0, true, 0, 0, LORA_IQ_INVERSION_ON, true);
 
-
+ MX_TIM22_Init();
+ HAL_TIM_Base_Start(&htim22);
+ DS18B20_Init(DS18B20_Resolution_9bits);
 
   while (1)
   {
-//		LED_On(LED_GREEN)
-//		DelayMs(100);
-//		LED_Off(LED_GREEN)
-//		BufferSize = 4;
-//		Buffer[0] = 0xb5;//nagłówek
-//		Buffer[1] = temp%2;//adres
-//		Buffer[2] = temp++;//temp 16*C
-//		Buffer[3] = CalculateCRC8(Buffer,3);
-//		
-//		uint8_t EncryptedBuffer[4] = {0};
-//		
-//		EncryptData(Buffer,4,EncryptedBuffer);
-//		
-//		Radio.Send(EncryptedBuffer, BufferSize);
+		HAL_Delay(30000);
 
+		LED_On(LED_GREEN)
+		DelayMs(100);
+		LED_Off(LED_GREEN)
+		BufferSize = 4;
+		Buffer[0] = 0xb5;//nagłówek
+		Buffer[1] = 0;//adres
+		Buffer[2] = temperature_int8;//temp 16*C
+		Buffer[3] = CalculateCRC8(Buffer,3);
+		
+		uint8_t EncryptedBuffer[4] = {0};	
+		EncryptData(Buffer,4,EncryptedBuffer);
+		Radio.Send(EncryptedBuffer, BufferSize);
+		
+	 DS18B20_ReadAll();
+	 DS18B20_StartAll();
+	 
+	 float temperature_float;
+	 char message[64];
+
+	 for(uint8_t i = 0; i < DS18B20_Quantity(); i++)
+	 {
+		if(DS18B20_GetTemperature(i, &temperature_float))
+		{
+			temperature_int8 = (int8_t)(round(temperature_float));// temperature_float w celach diagnostycznych
+			temperature_to_send = abs(temperature_int8);
+
+			if(temperature_int8 < 0) //sprawdzanie znaku
+			{
+
+				temperature_to_send |= 1<<7;
+			}
+			else
+			{
+					//do nothing;
+			}
+			
+
+			
+		}
+	 }
   
   }
 }
